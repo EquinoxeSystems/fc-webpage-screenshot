@@ -1,4 +1,6 @@
-BSD 3-Clause License
+/*
+
+webpage-screenshot
 
 Copyright (c) 2023, Rodolfo González González.
 
@@ -26,3 +28,38 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+const express = require('express')
+const puppeteer = require('puppeteer');
+const { v4: uuidv4 } = require('uuid');
+
+const app = express()
+const port = 9000
+
+app.get('/webpage-screenshot', async (req, res) => {
+    const url = req.query.url;
+    const browser = await puppeteer.launch({
+        headless: true,
+        executablePath: '/usr/bin/chromium-browser',
+        args: [
+            '--no-sandbox',
+            '--headless',
+            '--disable-gpu',
+            '--disable-dev-shm-usage'
+        ]
+    })
+    const page = await browser.newPage();
+    const file = '/tmp/' + uuidv4() + '.jpg';
+
+    await page.goto(url);
+    await page.screenshot({ path: file, fullPage: false });
+
+    browser.close();
+
+    res.download(file);
+})
+
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`)
+})
