@@ -1,6 +1,6 @@
 # fc-webpage-screenshot
 
-This is a NodeJS microservice for Aliyun Function Compute FaaS that makes an screenshot of a web page, using [puppeteer](https://www.npmjs.com/package/puppeteer) and [chromium](https://www.chromium.org/Home/).
+This is a microservice written in Javascript for Aliyun Function Compute NodeJS FaaS that makes an screenshot of a web page, using [puppeteer](https://www.npmjs.com/package/puppeteer) and [chromium](https://www.chromium.org/Home/).
 
 ## Notes
 
