@@ -4,7 +4,7 @@ This is a microservice written in Javascript for Aliyun Function Compute NodeJS 
 
 ## Notes
 
-* A Dockerfile is provided as a guide. You might need to customize it.
+* A *Dockerfile* is provided as a guide. You might need to customize it.
 * The FC is working in Web Server mode, so [express](https://www.npmjs.com/package/express) is used.
 
 ## License
