@@ -2,6 +2,12 @@
 
 This is a microservice written in Javascript for Aliyun Function Compute NodeJS FaaS that makes an screenshot of a web page, using [puppeteer](https://www.npmjs.com/package/puppeteer) and [chromium](https://www.chromium.org/Home/).
 
+The URL of the page to be screenshoted is passed via query parameter in the URL of the function.
+
+```
+/webpage-screenshot?url=https://www.example.com
+```
+
 ## Notes
 
 * A *Dockerfile* is provided as a guide. You might need to customize it.
