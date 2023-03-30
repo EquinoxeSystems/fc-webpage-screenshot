@@ -13,6 +13,8 @@ The URL of the page to be screenshoted is passed via query parameter in the URL 
 /webpage-screenshot?url=https://www.example.com
 ```
 
+The JPEG image of the captured screen will be returned.
+
 ## Notes
 
 * A *Dockerfile* is provided as a guide. You might need to customize it.
@@ -22,4 +24,4 @@ The URL of the page to be screenshoted is passed via query parameter in the URL 
 
 Copyright (c) 2023 Rodolfo González González.
 
-See the LICENSE file.
+Read the LICENSE file.
