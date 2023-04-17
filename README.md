@@ -5,7 +5,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/rgglez/fc-webpage-screenshot) 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/rgglez/fc-webpage-screenshot)
 
-This is a microservice written in Javascript for Aliyun Function Compute NodeJS FaaS that makes an screenshot of a web page, using [puppeteer](https://www.npmjs.com/package/puppeteer) and [chromium](https://www.chromium.org/Home/).
+This is a microservice written in Javascript for Aliyun Function Compute NodeJS FaaS that makes a screenshot of a web page, using [puppeteer](https://www.npmjs.com/package/puppeteer) and [chromium](https://www.chromium.org/Home/).
 
 The URL of the page to be screenshoted is passed via query parameter in the URL of the function.
 
